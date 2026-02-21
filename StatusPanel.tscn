@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://cebtxirdbcm4v"]
+
+[ext_resource type="Script" uid="uid://cittoyomfl805" path="res://status_panel.gd" id="1_jnmp8"]
+
+[sub_resource type="FontFile" id="FontFile_jnmp8"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_rwavv"]
+default_font = SubResource("FontFile_jnmp8")
+default_font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60b88"]
+bg_color = Color(0, 0, 0, 0.39215687)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[node name="StatusPanel" type="Panel"]
+custom_minimum_size = Vector2(0, 60)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_rwavv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_60b88")
+script = ExtResource("1_jnmp8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Logo" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CompanyLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer2" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="NameLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MoneyLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="HBoxContainer"]
+layout_mode = 2

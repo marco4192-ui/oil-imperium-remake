@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2p4q8j5x3y1z"]
+
+[ext_resource type="Script" path="res://floating_text.gd" id="1_float"]
+
+[node name="FloatingText" type="Label"]
+offset_right = 200.0
+offset_bottom = 50.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "$1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_float")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://y0oqv32vv7e4"]
+
+[ext_resource type="Script" uid="uid://drxw70o1ow50a" path="res://map_screen.gd" id="1_ob8qq"]
+
+[node name="MapScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ob8qq")
+
+[node name="MoneyLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 926.0
+offset_right = 966.0
+offset_bottom = 23.0
+text = "1000"
+
+[node name="BtnTexas" type="Button" parent="."]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 204.0
+offset_right = 301.0
+offset_bottom = 235.0
+text = "Texas $400K"
+
+[node name="BtnBack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 131.0
+offset_bottom = 36.0
+text = "Zurück ins Büro"
+
+[connection signal="pressed" from="BtnTexas" to="." method="_on_btn_texas_pressed"]
+[connection signal="pressed" from="BtnBack" to="." method="_on_btn_back_pressed"]

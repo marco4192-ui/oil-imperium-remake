@@ -1,0 +1,142 @@
+[gd_scene load_steps=15 format=3 uid="uid://dgxmpm8dymwxb"]
+
+[ext_resource type="Script" uid="uid://bkotfy1ltho3g" path="res://drilling_game.gd" id="1_icfgg"]
+[ext_resource type="Texture2D" uid="uid://cpjhxlvjwymdf" path="res://assets/DrillingGame/sky.png" id="2_tnl2y"]
+[ext_resource type="Texture2D" uid="uid://dt5qwgvm6rd22" path="res://assets/DrillingGame/Rohr.png" id="3_dil86"]
+[ext_resource type="Texture2D" uid="uid://noy1tqcxgdbi" path="res://assets/DrillingGame/Land_background_nosky.png" id="3_nadnj"]
+[ext_resource type="Texture2D" uid="uid://yh71k2rcf0qu" path="res://assets/DrillingGame/Bohrkopf.png" id="4_nadnj"]
+[ext_resource type="Texture2D" uid="uid://uj7f4a14pnau" path="res://assets/DrillingGame/bohrturm.png" id="5_icfgg"]
+[ext_resource type="AudioStream" uid="uid://b1iaiqxmd7awa" path="res://assets/DrillingGame/Drill.mp3" id="7_icfgg"]
+[ext_resource type="AudioStream" uid="uid://dl8tseqf1tawn" path="res://assets/DrillingGame/oilflush.mp3" id="8_6crge"]
+[ext_resource type="Script" uid="uid://c1w1u10762fdx" path="res://scope.gd" id="9_scope"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_drill"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_drill"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 60.0
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+gravity = Vector3(0, 300, 0)
+scale_min = 2.0
+scale_max = 4.0
+color = Color(0.6, 0.6, 0.6, 1)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tnl2y"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dil86"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 25.0
+initial_velocity_min = 400.0
+initial_velocity_max = 600.0
+gravity = Vector3(0, 980, 0)
+scale_min = 5.0
+scale_max = 10.0
+color = Color(0.08, 0.08, 0.08, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ui"]
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="DrillingMiniGame" type="Node2D"]
+script = ExtResource("1_icfgg")
+
+[node name="Land" type="Sprite2D" parent="."]
+position = Vector2(962, 719.25)
+scale = Vector2(0.69840115, 0.39622128)
+texture = ExtResource("3_nadnj")
+
+[node name="DrillAssembly" type="Node2D" parent="."]
+position = Vector2(960, 117)
+
+[node name="PipeSprite" type="Sprite2D" parent="DrillAssembly"]
+position = Vector2(13.999976, -453)
+scale = Vector2(0.15566556, 0.259125)
+texture = ExtResource("3_dil86")
+
+[node name="BitSprite" type="Sprite2D" parent="DrillAssembly"]
+position = Vector2(16.000004, 232.99998)
+scale = Vector2(0.18549562, 0.1745534)
+texture = ExtResource("4_nadnj")
+offset = Vector2(0, 20)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="DrillAssembly/BitSprite"]
+material = SubResource("CanvasItemMaterial_drill")
+position = Vector2(-10.200746, 106.69138)
+amount = 50
+lifetime = 0.5
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_drill")
+
+[node name="Sky" type="Sprite2D" parent="."]
+position = Vector2(964.00006, 184)
+scale = Vector2(1.1303066, 0.46)
+texture = ExtResource("2_tnl2y")
+
+[node name="OilGeyser" type="GPUParticles2D" parent="."]
+z_index = 10
+position = Vector2(976, 79.000015)
+scale = Vector2(1, 0.99999994)
+emitting = false
+amount = 300
+texture = SubResource("PlaceholderTexture2D_tnl2y")
+process_material = SubResource("ParticleProcessMaterial_dil86")
+
+[node name="RigSprite" type="Sprite2D" parent="."]
+position = Vector2(976.99994, 232)
+scale = Vector2(0.2948732, 0.21991412)
+texture = ExtResource("5_icfgg")
+
+[node name="SfxDrill" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_icfgg")
+max_polyphony = 4
+
+[node name="SfxOil" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_6crge")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StatusLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 70.0
+grow_horizontal = 2
+text = "BOHRUNG LÄUFT..."
+label_settings = SubResource("LabelSettings_ui")
+horizontal_alignment = 1
+
+[node name="Scope" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_left = 0.85700005
+anchor_top = 0.734
+anchor_right = 0.85700005
+anchor_bottom = 0.734
+offset_left = -210.44006
+offset_top = -209.72003
+offset_right = 209.55994
+offset_bottom = 210.27997
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_scope")
+
+[node name="Crosshair" type="ColorRect" parent="CanvasLayer/Scope"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)

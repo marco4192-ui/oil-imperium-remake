@@ -1,0 +1,1054 @@
+[gd_scene load_steps=31 format=3 uid="uid://cla0wd4xwosly"]
+
+[ext_resource type="Script" uid="uid://djopxw55etvg3" path="res://computer.gd" id="1_7nkhe"]
+[ext_resource type="FontFile" uid="uid://d13f6p2uojwyr" path="res://assets/computer/Doto-VariableFont_ROND,wght.ttf" id="1_bamam"]
+[ext_resource type="Texture2D" uid="uid://deut742aqtxi6" path="res://assets/70s_Maps/worldmap.png" id="3_7s1hw"]
+[ext_resource type="Shader" uid="uid://b1x8jhotesf74" path="res://Computer.gdshader" id="3_561pf"]
+
+[sub_resource type="Theme" id="Theme_561pf"]
+default_font = ExtResource("1_bamam")
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_lxwf0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dueua"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tjl6a"]
+bg_color = Color(0.2, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7s1hw"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxwf0"]
+bg_color = Color(0.2, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f6el"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyaym"]
+bg_color = Color(0.2, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dekc5"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjhme"]
+bg_color = Color(0.2, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqpia"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbt5y"]
+bg_color = Color(0.2, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbitc"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arhto"]
+bg_color = Color(0.2, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76rvk"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjo7d"]
+bg_color = Color(0.2, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qw8ug"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbxaq"]
+bg_color = Color(0.2, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72w6f"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0oqwh"]
+bg_color = Color(0.2, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l232m"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2m357"]
+bg_color = Color(0.2, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l360b"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0, 0.8509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fldj1"]
+bg_color = Color(0.2, 1, 0, 0.8509804)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_xbxaq"]
+default_font = ExtResource("1_bamam")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7s1hw"]
+shader = ExtResource("3_561pf")
+shader_parameter/scanline_count = 800.0
+shader_parameter/scanline_opacity = 0.2
+shader_parameter/warp_amount = 0.02
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/vignette_opacity = 0.2
+shader_parameter/aberration_amount = 0.02
+
+[node name="Computer" type="Control"]
+modulate = Color(0.2, 1, 0, 1)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 4.0
+offset_right = -3.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_561pf")
+script = ExtResource("1_7nkhe")
+
+[node name="Background" type="ColorRect" parent="."]
+modulate = Color(0.2, 1, 0, 0.6901961)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -61.0
+offset_right = 49.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Header" type="Label" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_right = 548.0
+offset_bottom = 48.0
+text = "OIL-OS v1.0 - 01/1970"
+
+[node name="MoneyLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1387.0
+offset_right = 1909.0
+offset_bottom = 48.0
+text = "Money"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 4.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_lxwf0")
+
+[node name="HeaderLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "ROOT >"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FileList" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MenuContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 142.0
+offset_right = 303.0
+offset_bottom = 438.0
+
+[node name="BtnOilFields" type="Button" parent="MenuContainer"]
+layout_mode = 2
+text = "ÖLFELDER"
+
+[node name="BtnTanks" type="Button" parent="MenuContainer"]
+layout_mode = 2
+text = "TANKS"
+
+[node name="BtnOil" type="Button" parent="MenuContainer"]
+layout_mode = 2
+text = "ÖLBESTAND"
+
+[node name="BtnResearch" type="Button" parent="MenuContainer"]
+layout_mode = 2
+text = "FORSCHUNG"
+
+[node name="BtnStats" type="Button" parent="MenuContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 1, 0, 1)
+text = "STATISTIKEN"
+
+[node name="ControlPanel" type="Panel" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.0050000004
+offset_left = 5.0
+offset_top = 92.0
+offset_right = 47.688004
+offset_bottom = 132.0
+
+[node name="OilFieldMenu" type="Control" parent="ControlPanel"]
+visible = false
+anchors_preset = 0
+offset_left = 163.0
+offset_top = 30.0
+offset_right = 203.0
+offset_bottom = 70.0
+
+[node name="MapBackground" type="TextureRect" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 57.0
+offset_right = 1735.0
+offset_bottom = 920.0
+texture = ExtResource("3_7s1hw")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 699.0
+offset_top = -104.0
+offset_right = 1107.0
+offset_bottom = -56.0
+text = "ÖLFELD MANAGEMENT"
+
+[node name="Label" type="Label" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = -3.0
+offset_right = 1023.0
+offset_bottom = 45.0
+text = "REGION WÄHLEN (KOSTEN FÖRDERLIZENZ):"
+
+[node name="BtnAlaska" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 162.0
+offset_right = 334.0
+offset_bottom = 218.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dueua")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tjl6a")
+text = "ALASKA"
+
+[node name="BtnTexas" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 313.0
+offset_right = 480.0
+offset_bottom = 369.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_7s1hw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lxwf0")
+text = "TEXAS"
+
+[node name="BtnNordsee" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 793.0
+offset_top = 147.0
+offset_right = 969.0
+offset_bottom = 203.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3f6el")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nyaym")
+text = "NORDSEE"
+
+[node name="BtnSaudiArabien" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 981.0
+offset_top = 351.0
+offset_right = 1301.0
+offset_bottom = 407.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dekc5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vjhme")
+text = "SAUDI-ARABIEN"
+
+[node name="BtnSibirien" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 1137.0
+offset_top = 126.0
+offset_right = 1337.0
+offset_bottom = 182.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_hqpia")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vbt5y")
+text = "SIBIRIEN"
+
+[node name="BtnVenezuela" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 476.0
+offset_right = 760.0
+offset_bottom = 532.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_gbitc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_arhto")
+text = "VENEZUELA"
+
+[node name="BtnMexiko" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 437.0
+offset_right = 441.0
+offset_bottom = 493.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_76rvk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bjo7d")
+text = "MEXIKO"
+
+[node name="BtnNigeria" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 843.0
+offset_top = 490.0
+offset_right = 1019.0
+offset_bottom = 546.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_qw8ug")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xbxaq")
+text = "NIGERIA"
+
+[node name="BtnIndonesien" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 1352.0
+offset_top = 514.0
+offset_right = 1600.0
+offset_bottom = 570.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_72w6f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0oqwh")
+text = "INDONESIEN"
+
+[node name="BtnBrasilien" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 604.0
+offset_right = 783.0
+offset_bottom = 660.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_l232m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2m357")
+text = "BRASILIEN"
+
+[node name="BtnLibyen" type="Button" parent="ControlPanel/OilFieldMenu"]
+layout_mode = 0
+offset_left = 757.0
+offset_top = 311.0
+offset_right = 909.0
+offset_bottom = 367.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_l360b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fldj1")
+text = "LIBYEN"
+
+[node name="TankMenu" type="Control" parent="ControlPanel"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="ControlPanel/TankMenu"]
+layout_mode = 0
+offset_left = 846.0
+offset_top = -84.0
+offset_right = 1206.0
+offset_bottom = -36.0
+text = "Tank Management"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ControlPanel/TankMenu"]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 56.0
+offset_right = 817.0
+offset_bottom = 793.0
+
+[node name="StatusLabel" type="Label" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "Wähle eine Region:"
+
+[node name="Spacer11" type="Control" parent="ControlPanel/TankMenu/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="BtnTankAlaska" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "ALASKA"
+
+[node name="BtnTankTexas" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "TEXAS"
+
+[node name="BtnTankNordsee" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "NORDSEE"
+
+[node name="BtnTankSaudi" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "SAUDI-ARABIEN"
+
+[node name="BtnTankSibirien" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "SIBIRIEN"
+
+[node name="BtnTankIndonesien" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "INDONESIEN"
+
+[node name="BtnTankVenezuela" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "VENEZUELA"
+
+[node name="BtnTankNigeria" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "NIGERIA"
+
+[node name="BtnTankLibyen" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "LIBYEN"
+
+[node name="BtnTankMexiko" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "MEXIKO"
+
+[node name="BtnTankBrasilien" type="Button" parent="ControlPanel/TankMenu/VBoxContainer2"]
+layout_mode = 2
+text = "BRASIELIEN"
+
+[node name="StatusLabel2" type="Label" parent="ControlPanel/TankMenu"]
+layout_mode = 0
+offset_left = 956.0
+offset_top = 60.0
+offset_right = 1756.0
+offset_bottom = 108.0
+localize_numeral_system = false
+text = "Aktueller Status:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlPanel/TankMenu"]
+layout_mode = 0
+offset_left = 990.0
+offset_top = 487.0
+offset_right = 1790.0
+offset_bottom = 791.0
+
+[node name="BtnBuySmall" type="Button" parent="ControlPanel/TankMenu/VBoxContainer"]
+layout_mode = 2
+text = "Kleiner Tank (500k bbl) - $50.000"
+
+[node name="BtnBuyMedium" type="Button" parent="ControlPanel/TankMenu/VBoxContainer"]
+layout_mode = 2
+text = "Mittlerer Tank (1m bbl) - $90.000"
+
+[node name="BtnBuyLarge" type="Button" parent="ControlPanel/TankMenu/VBoxContainer"]
+layout_mode = 2
+text = "Großer Tank (2m bbl) - $160.000"
+
+[node name="Spacer12" type="Control" parent="ControlPanel/TankMenu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BtnSellTanks" type="Button" parent="ControlPanel/TankMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="SalesMenu" type="Control" parent="ControlPanel"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="ControlPanel/SalesMenu"]
+layout_mode = 0
+offset_left = 871.0
+offset_top = -86.0
+offset_right = 1327.0
+offset_bottom = -38.0
+text = "WELTMARKT & VERKAUF"
+
+[node name="TabContainer" type="TabContainer" parent="ControlPanel/SalesMenu"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 41.0
+offset_right = 1890.0
+offset_bottom = 952.0
+tab_alignment = 1
+current_tab = 0
+
+[node name="Bestand & Spotmarkt" type="VBoxContainer" parent="ControlPanel/SalesMenu/TabContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_tab_index = 0
+
+[node name="PriceLabel" type="Label" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt"]
+layout_mode = 2
+text = "AKTUELLER KURS: $40.00 / BARREL"
+
+[node name="Spacer5" type="Control" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt"]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+
+[node name="HSeperator" type="HBoxContainer" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt"]
+layout_mode = 2
+
+[node name="RegionVSeperator" type="VBoxContainer" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+
+[node name="StockLabel" type="Label" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "BITTE REGION WÄHLEN:"
+
+[node name="Spacer6" type="Control" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="BtnSellTexas" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "TEXAS"
+
+[node name="BtnSellAlaska" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "ALASKA"
+
+[node name="BtnSellNordsee" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "NORDSEE"
+
+[node name="BtnSellNigeria" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "NIGERIA"
+
+[node name="BtnSellVenezuela" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "VENEZUELA"
+
+[node name="BtnSellMexiko" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "MEXIKO"
+
+[node name="BtnSellSaudi" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "SAUDI-ARABIEN"
+
+[node name="BtnSellSibirien" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "SIBIRIEN"
+
+[node name="BtnSellIndonesien" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "INDONESIEN"
+
+[node name="BtnSellLibyen" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "LIBYEN"
+
+[node name="BtnSellBrasilien" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator"]
+layout_mode = 2
+text = "BRASILIEN"
+
+[node name="Spacer" type="Control" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="SellVSeperator" type="VBoxContainer" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator"]
+layout_mode = 2
+
+[node name="StockLabel2" type="Label" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator"]
+layout_mode = 2
+text = "BITTE REGION WÄHLEN:"
+
+[node name="Control" type="Control" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="LabelSelectedAmount" type="Label" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator"]
+layout_mode = 2
+theme = SubResource("Theme_xbxaq")
+theme_override_constants/outline_size = 12
+text = "Menge festlegen"
+
+[node name="SalesSlider" type="HSlider" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+rounded = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator"]
+layout_mode = 2
+
+[node name="BtnMin" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator/HBoxContainer"]
+layout_mode = 2
+text = "0%"
+
+[node name="Spacer2" type="Control" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator/HBoxContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+
+[node name="Btn50" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator/HBoxContainer"]
+layout_mode = 2
+text = "50%"
+
+[node name="Spacer3" type="Control" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator/HBoxContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+
+[node name="BtnMax" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator/HBoxContainer"]
+layout_mode = 2
+text = "100%"
+
+[node name="Spacer4" type="Control" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BtnSellAll" type="Button" parent="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator"]
+layout_mode = 2
+text = "VERKAUFEN"
+
+[node name="Contracts" type="VBoxContainer" parent="ControlPanel/SalesMenu/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ActiveContractsContainer" type="VBoxContainer" parent="ControlPanel/SalesMenu/TabContainer/Contracts"]
+layout_mode = 2
+
+[node name="LaufendeVerträgeLabel" type="Label" parent="ControlPanel/SalesMenu/TabContainer/Contracts/ActiveContractsContainer"]
+layout_mode = 2
+text = "Laufende Verträge"
+
+[node name="Spacer10" type="Control" parent="ControlPanel/SalesMenu/TabContainer/Contracts"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="OfferContractsContainer" type="VBoxContainer" parent="ControlPanel/SalesMenu/TabContainer/Contracts"]
+layout_mode = 2
+
+[node name="MarktangeboteLabel" type="Label" parent="ControlPanel/SalesMenu/TabContainer/Contracts/OfferContractsContainer"]
+layout_mode = 2
+text = "Marktangebote"
+
+[node name="Futures" type="VBoxContainer" parent="ControlPanel/SalesMenu/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="ActiveFuturesContainer" type="VBoxContainer" parent="ControlPanel/SalesMenu/TabContainer/Futures"]
+layout_mode = 2
+
+[node name="LaufendeTermingeschäfteLabel" type="Label" parent="ControlPanel/SalesMenu/TabContainer/Futures/ActiveFuturesContainer"]
+layout_mode = 2
+text = "Laufende Termingeschäfte"
+
+[node name="Spacer10" type="Control" parent="ControlPanel/SalesMenu/TabContainer/Futures"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="OfferFuturesContainer" type="VBoxContainer" parent="ControlPanel/SalesMenu/TabContainer/Futures"]
+layout_mode = 2
+
+[node name="NeueTermingeschäfteLabel" type="Label" parent="ControlPanel/SalesMenu/TabContainer/Futures/OfferFuturesContainer"]
+layout_mode = 2
+text = "Neue Termingeschäfte"
+
+[node name="StatsMenu" type="Panel" parent="ControlPanel"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -3.0
+offset_right = 30.0
+offset_bottom = 37.0
+
+[node name="TopBar" type="HBoxContainer" parent="ControlPanel/StatsMenu"]
+layout_mode = 0
+offset_left = 681.0
+offset_top = 23.0
+offset_right = 1565.0
+offset_bottom = 79.0
+
+[node name="BtnShowCurrent" type="Button" parent="ControlPanel/StatsMenu/TopBar"]
+layout_mode = 2
+text = "Aktueller Monat"
+alignment = 0
+
+[node name="Control" type="Control" parent="ControlPanel/StatsMenu/TopBar"]
+custom_minimum_size = Vector2(75, 50)
+layout_mode = 2
+
+[node name="BtnShowHistory" type="Button" parent="ControlPanel/StatsMenu/TopBar"]
+layout_mode = 2
+text = "letzte 12 Monate"
+alignment = 2
+
+[node name="ReportContainer" type="VBoxContainer" parent="ControlPanel/StatsMenu"]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 104.0
+offset_right = 1888.0
+offset_bottom = 945.0
+
+[node name="<" type="Button" parent="ControlPanel/StatsMenu/ReportContainer"]
+layout_mode = 2
+text = "<"
+
+[node name=">" type="Button" parent="ControlPanel/StatsMenu/ReportContainer"]
+layout_mode = 2
+text = ">"
+
+[node name="lbl_stats_region" type="Label" parent="ControlPanel/StatsMenu/ReportContainer"]
+layout_mode = 2
+text = "REPORT: "
+
+[node name="box_income" type="VBoxContainer" parent="ControlPanel/StatsMenu/ReportContainer"]
+layout_mode = 2
+
+[node name="box_expense" type="VBoxContainer" parent="ControlPanel/StatsMenu/ReportContainer"]
+layout_mode = 2
+
+[node name="lbl_total_profit" type="Label" parent="ControlPanel/StatsMenu/ReportContainer"]
+layout_mode = 2
+
+[node name="GraphContainer" type="Control" parent="ControlPanel/StatsMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 402.0
+offset_top = 93.0
+offset_right = 1867.0
+offset_bottom = 902.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="ControlPanel/StatsMenu/GraphContainer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0)
+
+[node name="GraphRenderArea" type="Control" parent="ControlPanel/StatsMenu/GraphContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Toggles" type="HBoxContainer" parent="ControlPanel/StatsMenu/GraphContainer"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CheckRevenue" type="CheckBox" parent="ControlPanel/StatsMenu/GraphContainer/Toggles"]
+layout_mode = 2
+text = "Einnahmen"
+
+[node name="CheckExpenses" type="CheckBox" parent="ControlPanel/StatsMenu/GraphContainer/Toggles"]
+layout_mode = 2
+text = "Ausgaben"
+
+[node name="CheckProfit" type="CheckBox" parent="ControlPanel/StatsMenu/GraphContainer/Toggles"]
+layout_mode = 2
+text = "Gewinn"
+
+[node name="CheckCash" type="CheckBox" parent="ControlPanel/StatsMenu/GraphContainer/Toggles"]
+layout_mode = 2
+text = "Kontostand"
+
+[node name="ResearchMenu" type="Panel" parent="ControlPanel"]
+visible = false
+layout_mode = 0
+offset_left = 375.0
+offset_top = 87.0
+offset_right = 1895.0
+offset_bottom = 958.0
+
+[node name="CampusOverview" type="VBoxContainer" parent="ControlPanel/ResearchMenu"]
+layout_mode = 0
+offset_right = 433.0
+offset_bottom = 871.0
+
+[node name="BtnLab" type="Button" parent="ControlPanel/ResearchMenu/CampusOverview"]
+layout_mode = 2
+
+[node name="BtnDrillGround" type="Button" parent="ControlPanel/ResearchMenu/CampusOverview"]
+layout_mode = 2
+
+[node name="BtnWorkshop" type="Button" parent="ControlPanel/ResearchMenu/CampusOverview"]
+layout_mode = 2
+
+[node name="BtnTestSite" type="Button" parent="ControlPanel/ResearchMenu/CampusOverview"]
+layout_mode = 2
+
+[node name="FacilityDetails" type="VBoxContainer" parent="ControlPanel/ResearchMenu"]
+layout_mode = 0
+offset_right = 1507.0
+offset_bottom = 885.0
+
+[node name="FacilityTitle" type="Label" parent="ControlPanel/ResearchMenu/FacilityDetails"]
+layout_mode = 2
+
+[node name="BtnBackToCampus" type="Button" parent="ControlPanel/ResearchMenu/FacilityDetails"]
+layout_mode = 2
+text = "zurück zum Campus"
+alignment = 0
+
+[node name="BuyContainer" type="Panel" parent="ControlPanel/ResearchMenu/FacilityDetails"]
+layout_mode = 2
+
+[node name="CostLabel" type="Label" parent="ControlPanel/ResearchMenu/FacilityDetails/BuyContainer"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 547.0
+offset_right = 380.0
+offset_bottom = 736.0
+
+[node name="BtnBuildFacility" type="Button" parent="ControlPanel/ResearchMenu/FacilityDetails/BuyContainer"]
+layout_mode = 0
+offset_left = -352.0
+offset_top = 464.0
+offset_right = -23.0
+offset_bottom = 559.0
+
+[node name="ActionContainer" type="Panel" parent="ControlPanel/ResearchMenu/FacilityDetails"]
+layout_mode = 2
+
+[node name="TechList" type="VBoxContainer" parent="ControlPanel/ResearchMenu/FacilityDetails/ActionContainer"]
+layout_mode = 0
+offset_left = 636.0
+offset_top = -32.0
+offset_right = 1508.0
+offset_bottom = 788.0
+
+[node name="BtnPractice" type="Button" parent="ControlPanel/ResearchMenu/FacilityDetails/ActionContainer"]
+layout_mode = 0
+offset_left = -348.0
+offset_top = 581.0
+offset_right = -21.0
+offset_bottom = 663.0
+
+[node name="CRTEffect" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = -87.0
+offset_top = 12.0
+offset_right = -29.0
+offset_bottom = 76.0
+
+[node name="BtnLogOut" type="Button" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 995.0
+offset_right = 370.0
+offset_bottom = 1051.0
+text = "AUSSCHALTEN"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+material = SubResource("ShaderMaterial_7s1hw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="pressed" from="MenuContainer/BtnOilFields" to="." method="_on_btn_oil_fields_pressed"]
+[connection signal="pressed" from="MenuContainer/BtnTanks" to="." method="_on_btn_tanks_pressed"]
+[connection signal="pressed" from="MenuContainer/BtnOil" to="." method="_on_btn_oil_pressed"]
+[connection signal="pressed" from="MenuContainer/BtnResearch" to="." method="_on_btn_research_pressed"]
+[connection signal="pressed" from="MenuContainer/BtnStats" to="." method="_on_btn_stats_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnAlaska" to="." method="_on_btn_alaska_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnTexas" to="." method="_on_btn_texas_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnNordsee" to="." method="_on_btn_nordsee_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnSaudiArabien" to="." method="_on_btn_saudi_arabien_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnSibirien" to="." method="_on_btn_sibirien_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnVenezuela" to="." method="_on_btn_venezuela_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnMexiko" to="." method="_on_btn_mexiko_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnNigeria" to="." method="_on_btn_nigeria_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnIndonesien" to="." method="_on_btn_indonesien_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnBrasilien" to="." method="_on_btn_brasilien_pressed"]
+[connection signal="pressed" from="ControlPanel/OilFieldMenu/BtnLibyen" to="." method="_on_btn_libyen_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankAlaska" to="." method="_on_btn_tank_alaska_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankTexas" to="." method="_on_btn_tank_texas_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankNordsee" to="." method="_on_btn_tank_nordsee_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankSaudi" to="." method="_on_btn_tank_saudi_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankSibirien" to="." method="_on_btn_tank_sibirien_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankIndonesien" to="." method="_on_btn_tank_indonesien_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankVenezuela" to="." method="_on_btn_tank_venezuela_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankNigeria" to="." method="_on_btn_tank_nigeria_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankLibyen" to="." method="_on_btn_tank_libyen_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankMexiko" to="." method="_on_btn_tank_mexiko_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer2/BtnTankBrasilien" to="." method="_on_btn_tank_brasilien_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer/BtnBuySmall" to="." method="_on_btn_buy_small_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer/BtnBuyMedium" to="." method="_on_btn_buy_medium_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer/BtnBuyLarge" to="." method="_on_btn_buy_large_pressed"]
+[connection signal="pressed" from="ControlPanel/TankMenu/VBoxContainer/BtnSellTanks" to="." method="_on_btn_sell_tanks_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellTexas" to="." method="_on_btn_sell_texas_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellAlaska" to="." method="_on_btn_sell_alaska_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellNordsee" to="." method="_on_btn_sell_nordsee_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellNigeria" to="." method="_on_btn_sell_nigeria_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellVenezuela" to="." method="_on_btn_sell_venezuela_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellMexiko" to="." method="_on_btn_sell_mexiko_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellSaudi" to="." method="_on_btn_sell_saudi_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellSibirien" to="." method="_on_btn_sell_sibirien_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellIndonesien" to="." method="_on_btn_sell_indonesien_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellLibyen" to="." method="_on_btn_sell_libyen_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/RegionVSeperator/BtnSellBrasilien" to="." method="_on_btn_sell_brasilien_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator/HBoxContainer/BtnMin" to="." method="_on_btn_min_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator/HBoxContainer/Btn50" to="." method="_on_btn_50_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator/HBoxContainer/BtnMax" to="." method="_on_btn_max_pressed"]
+[connection signal="pressed" from="ControlPanel/SalesMenu/TabContainer/Bestand & Spotmarkt/HSeperator/SellVSeperator/BtnSellAll" to="." method="_on_btn_sell_all_pressed"]
+[connection signal="pressed" from="ControlPanel/StatsMenu/TopBar/BtnShowCurrent" to="." method="_on_btn_show_current_pressed"]
+[connection signal="pressed" from="ControlPanel/StatsMenu/TopBar/BtnShowHistory" to="." method="_on_btn_show_history_pressed"]
+[connection signal="pressed" from="ControlPanel/StatsMenu/ReportContainer/<" to="." method="_on__pressed"]
+[connection signal="pressed" from="ControlPanel/StatsMenu/ReportContainer/>" to="." method="_on__pressed"]
+[connection signal="pressed" from="ControlPanel/ResearchMenu/CampusOverview/BtnLab" to="." method="_on_btn_lab_pressed"]
+[connection signal="pressed" from="ControlPanel/ResearchMenu/CampusOverview/BtnDrillGround" to="." method="_on_btn_drill_ground_pressed"]
+[connection signal="pressed" from="ControlPanel/ResearchMenu/CampusOverview/BtnWorkshop" to="." method="_on_btn_workshop_pressed"]
+[connection signal="pressed" from="ControlPanel/ResearchMenu/CampusOverview/BtnTestSite" to="." method="_on_btn_test_site_pressed"]
+[connection signal="pressed" from="ControlPanel/ResearchMenu/FacilityDetails/BtnBackToCampus" to="." method="_on_btn_back_to_campus_pressed"]
+[connection signal="pressed" from="ControlPanel/ResearchMenu/FacilityDetails/BuyContainer/BtnBuildFacility" to="." method="_on_btn_build_facility_pressed"]
+[connection signal="pressed" from="ControlPanel/ResearchMenu/FacilityDetails/ActionContainer/BtnPractice" to="." method="_on_btn_practice_pressed"]
+[connection signal="pressed" from="BtnLogOut" to="." method="_on_btn_exit_pressed"]

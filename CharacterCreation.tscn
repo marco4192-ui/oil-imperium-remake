@@ -1,0 +1,293 @@
+[gd_scene load_steps=4 format=3 uid="uid://c07vqkloua03o"]
+
+[ext_resource type="Script" uid="uid://bdq3ct6x5lr7d" path="res://character_creation.gd" id="1_cj3lx"]
+
+[sub_resource type="FontVariation" id="FontVariation_cj3lx"]
+
+[sub_resource type="Theme" id="Theme_cayyc"]
+default_font = SubResource("FontVariation_cj3lx")
+default_font_size = 40
+
+[node name="CharacterCreation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1098.0
+offset_bottom = -672.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_cayyc")
+script = ExtResource("1_cj3lx")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 2.5010002
+anchor_bottom = 2.5010002
+offset_right = -1920.7681
+offset_bottom = -1080.4321
+
+[node name="BtnLoad" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1474.0
+offset_top = 5.0
+offset_right = 1817.0
+offset_bottom = 101.0
+text = "Spiel laden"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 27.0
+offset_right = 833.0
+offset_bottom = 82.0
+size_flags_horizontal = 0
+mouse_filter = 1
+text = "Lege den Grundstein für dein Öl-Imperium."
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 196.0
+offset_right = 1096.0
+offset_bottom = 638.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+text = "Erstelle deinen Character:"
+
+[node name="Spacer9" type="Control" parent="MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="SelctorsBox" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="Spacer8" type="Control" parent="MainContainer/SelctorsBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.56
+mouse_filter = 2
+
+[node name="LeftColumn" type="VBoxContainer" parent="MainContainer/SelctorsBox"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LogoHorizontal" type="HBoxContainer" parent="MainContainer/SelctorsBox/LeftColumn"]
+layout_mode = 2
+
+[node name="SpacerX2" type="Control" parent="MainContainer/SelctorsBox/LeftColumn/LogoHorizontal"]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LogoVertrical" type="VBoxContainer" parent="MainContainer/SelctorsBox/LeftColumn/LogoHorizontal"]
+layout_mode = 2
+
+[node name="ComapanyLabel" type="Label" parent="MainContainer/SelctorsBox/LeftColumn/LogoHorizontal/LogoVertrical"]
+layout_mode = 2
+text = "Wähle ein Logo:"
+horizontal_alignment = 1
+
+[node name="LogoDisplay" type="TextureRect" parent="MainContainer/SelctorsBox/LeftColumn/LogoHorizontal/LogoVertrical"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SpacerX" type="Control" parent="MainContainer/SelctorsBox/LeftColumn/LogoHorizontal"]
+custom_minimum_size = Vector2(65, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LogoControls" type="HBoxContainer" parent="MainContainer/SelctorsBox/LeftColumn"]
+layout_mode = 2
+
+[node name="BtnLogoLeft" type="Button" parent="MainContainer/SelctorsBox/LeftColumn/LogoControls"]
+layout_mode = 2
+text = "  <  "
+
+[node name="Spacer15" type="Control" parent="MainContainer/SelctorsBox/LeftColumn/LogoControls"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CompanyNameLabel" type="Label" parent="MainContainer/SelctorsBox/LeftColumn/LogoControls"]
+clip_contents = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Firmenname"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer16" type="Control" parent="MainContainer/SelctorsBox/LeftColumn/LogoControls"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BtnLogoRight" type="Button" parent="MainContainer/SelctorsBox/LeftColumn/LogoControls"]
+layout_mode = 2
+text = "  >  "
+
+[node name="RightColumn" type="VBoxContainer" parent="MainContainer/SelctorsBox"]
+layout_mode = 2
+alignment = 2
+
+[node name="OfficeLabel" type="Label" parent="MainContainer/SelctorsBox/RightColumn"]
+layout_mode = 2
+text = "Wähle dein Büro:"
+horizontal_alignment = 1
+
+[node name="Spacer14" type="Control" parent="MainContainer/SelctorsBox/RightColumn"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="OfficeDisplay" type="TextureRect" parent="MainContainer/SelctorsBox/RightColumn"]
+custom_minimum_size = Vector2(600, 350)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OfficeControls" type="HBoxContainer" parent="MainContainer/SelctorsBox/RightColumn"]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="MainContainer/SelctorsBox/RightColumn/OfficeControls"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="BtnOfficeLeft" type="Button" parent="MainContainer/SelctorsBox/RightColumn/OfficeControls"]
+layout_mode = 2
+text = "  <  "
+
+[node name="Spacer2" type="Control" parent="MainContainer/SelctorsBox/RightColumn/OfficeControls"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OfficeNameLabel" type="Label" parent="MainContainer/SelctorsBox/RightColumn/OfficeControls"]
+clip_contents = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "OfficeName"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer3" type="Control" parent="MainContainer/SelctorsBox/RightColumn/OfficeControls"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BtnOfficeRight" type="Button" parent="MainContainer/SelctorsBox/RightColumn/OfficeControls"]
+clip_contents = true
+layout_mode = 2
+text = "  >  "
+
+[node name="Spacer4" type="Control" parent="MainContainer/SelctorsBox/RightColumn/OfficeControls"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Spacer5" type="Control" parent="MainContainer/SelctorsBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="RightColumn2" type="VBoxContainer" parent="MainContainer/SelctorsBox"]
+layout_mode = 2
+alignment = 2
+
+[node name="HQLabel" type="Label" parent="MainContainer/SelctorsBox/RightColumn2"]
+layout_mode = 2
+text = "Wähle deinen Hauptsitz:"
+horizontal_alignment = 1
+
+[node name="Spacer15" type="Control" parent="MainContainer/SelctorsBox/RightColumn2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HQDisplay" type="TextureRect" parent="MainContainer/SelctorsBox/RightColumn2"]
+custom_minimum_size = Vector2(600, 350)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HQControls" type="HBoxContainer" parent="MainContainer/SelctorsBox/RightColumn2"]
+layout_mode = 2
+
+[node name="Spacer10" type="Control" parent="MainContainer/SelctorsBox/RightColumn2/HQControls"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="BtnHQLeft" type="Button" parent="MainContainer/SelctorsBox/RightColumn2/HQControls"]
+layout_mode = 2
+text = "  <  "
+
+[node name="Spacer11" type="Control" parent="MainContainer/SelctorsBox/RightColumn2/HQControls"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HQNameLabel" type="Label" parent="MainContainer/SelctorsBox/RightColumn2/HQControls"]
+clip_contents = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "HQName"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer12" type="Control" parent="MainContainer/SelctorsBox/RightColumn2/HQControls"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BtnHQRight" type="Button" parent="MainContainer/SelctorsBox/RightColumn2/HQControls"]
+clip_contents = true
+layout_mode = 2
+text = "  >  "
+
+[node name="Spacer13" type="Control" parent="MainContainer/SelctorsBox/RightColumn2/HQControls"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Spacer6" type="Control" parent="MainContainer/SelctorsBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="InputBox" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MainContainer/InputBox"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MainContainer/InputBox"]
+layout_mode = 2
+text = "Dein Name:"
+
+[node name="NameInput" type="LineEdit" parent="MainContainer/InputBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StartButton" type="Button" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Spiel starten"
+
+[connection signal="pressed" from="BtnLoad" to="." method="_on_btn_load_pressed"]
+[connection signal="pressed" from="MainContainer/SelctorsBox/LeftColumn/LogoControls/BtnLogoLeft" to="." method="_on_btn_logo_left_pressed"]
+[connection signal="pressed" from="MainContainer/SelctorsBox/LeftColumn/LogoControls/BtnLogoRight" to="." method="_on_btn_logo_right_pressed"]
+[connection signal="pressed" from="MainContainer/SelctorsBox/RightColumn/OfficeControls/BtnOfficeLeft" to="." method="_on_btn_office_left_pressed"]
+[connection signal="pressed" from="MainContainer/SelctorsBox/RightColumn/OfficeControls/BtnOfficeRight" to="." method="_on_btn_office_right_pressed"]
+[connection signal="pressed" from="MainContainer/SelctorsBox/RightColumn2/HQControls/BtnHQLeft" to="." method="_on_btn_hq_left_pressed"]
+[connection signal="pressed" from="MainContainer/SelctorsBox/RightColumn2/HQControls/BtnHQRight" to="." method="_on_btn_hq_right_pressed"]
+[connection signal="pressed" from="MainContainer/StartButton" to="." method="_on_start_button_pressed"]

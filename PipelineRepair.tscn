@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjvo2mlci7y5x"]
+
+[ext_resource type="Script" uid="uid://bf0lf07wor3jk" path="res://pipeline_repair.gd" id="1_2yibm"]
+
+[node name="PipelineRepair" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2yibm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.27752772, 0.27752772, 0.27752772, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 336.0
+offset_bottom = 23.0
+text = "LECKS FLICKEN! KLICKE DIE ROTEN KNÖPFE!"
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

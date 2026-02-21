@@ -1,0 +1,248 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkmkdkxq7tyal"]
+
+[ext_resource type="Script" uid="uid://bh3fidnii5yoh" path="res://region_detail.gd" id="1_aku8v"]
+[ext_resource type="FontFile" uid="uid://d13f6p2uojwyr" path="res://assets/computer/Doto-VariableFont_ROND,wght.ttf" id="1_yay4l"]
+
+[sub_resource type="Theme" id="Theme_gvs7o"]
+default_font = ExtResource("1_yay4l")
+default_font_size = 24
+Button/colors/font_color = Color(0.2, 1, 0, 1)
+Label/colors/font_color = Color(0.2, 1, 0, 1)
+
+[sub_resource type="Theme" id="Theme_yay4l"]
+default_font = ExtResource("1_yay4l")
+default_font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_yay4l"]
+font_size = 40
+font_color = Color(0.2, 1, 0, 1)
+
+[node name="RegionDetail" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_gvs7o")
+script = ExtResource("1_aku8v")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1919.0
+offset_bottom = 1084.0
+color = Color(0, 0, 0, 1)
+
+[node name="MoneyLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1308.0
+offset_right = 1900.0
+offset_bottom = 78.0
+theme = SubResource("Theme_yay4l")
+theme_override_colors/font_color = Color(0.2, 1, 0, 1)
+text = "Money"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BackgroundMap" type="TextureRect" parent="."]
+modulate = Color(0.2, 1, 0, 0.6745098)
+layout_mode = 0
+offset_left = 601.0
+offset_top = 75.0
+offset_right = 1917.0
+offset_bottom = 1076.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -960.0
+offset_top = 2.0
+offset_right = 322.0
+offset_bottom = 83.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Title"
+label_settings = SubResource("LabelSettings_yay4l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Grid" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.31100002
+anchor_top = 0.164
+anchor_right = 0.98300004
+anchor_bottom = 0.95400006
+offset_left = 253.87994
+offset_top = 162.87999
+offset_right = -932.3601
+offset_bottom = -594.32007
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BtnBack" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 87.0
+offset_right = -1480.0
+offset_bottom = -916.0
+theme_override_font_sizes/font_size = 30
+text = "Claim-Manager beenden"
+
+[node name="InfoPanel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 238.0
+offset_top = 109.0
+offset_right = 544.0
+offset_bottom = 148.0
+mouse_filter = 2
+
+[node name="InfoLabel" type="Label" parent="InfoPanel"]
+layout_mode = 0
+offset_left = -213.0
+offset_top = 148.0
+offset_right = 221.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 34
+text = "Wähle einen Claim..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnAction" type="Button" parent="InfoPanel"]
+layout_mode = 0
+offset_left = -220.0
+offset_top = 724.0
+offset_right = 330.0
+offset_bottom = 824.0
+theme_override_font_sizes/font_size = 40
+text = "Kaufen/Bohren"
+
+[node name="BtnSecondary" type="Button" parent="InfoPanel"]
+layout_mode = 0
+offset_left = -220.0
+offset_top = 829.0
+offset_right = 330.0
+offset_bottom = 929.0
+text = "Verkaufen"
+
+[node name="ReservesBar" type="ProgressBar" parent="InfoPanel"]
+layout_mode = 0
+offset_left = -133.0
+offset_top = 624.0
+offset_right = 251.0
+offset_bottom = 686.0
+
+[node name="DrillMenu" type="Panel" parent="."]
+visible = false
+top_level = true
+light_mask = 129
+visibility_layer = 129
+layout_direction = 4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -209.0
+offset_right = 365.0
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="DrillMenu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Bohrung vorbereiten:"
+horizontal_alignment = 1
+
+[node name="BtnCancel" type="Button" parent="DrillMenu"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 358.0
+offset_right = 429.0
+offset_bottom = 395.0
+text = "NICHT BOHREN"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DrillMenu"]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 654.0
+offset_bottom = 189.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DrillMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+
+[node name="Text" type="Label" parent="DrillMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "A) SELBST BOHREN"
+
+[node name="CostListSelf" type="Label" parent="DrillMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Übersicht der Kosten..."
+
+[node name="TotalSelf" type="Label" parent="DrillMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Summe: $0"
+
+[node name="TimeSelf" type="Label" parent="DrillMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Dauer: 3 Monate"
+
+[node name="BtnSelf" type="Button" parent="DrillMenu/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Starten (Minispiel)"
+
+[node name="VSeparator" type="VSeparator" parent="DrillMenu/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="DrillMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Text" type="Label" parent="DrillMenu/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "B) EXPERTEN TEAM"
+
+[node name="Text2" type="Label" parent="DrillMenu/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Garantierter Erfolg. 
+Keine Gefahr.
+Schnellere Abwicklung."
+
+[node name="TotalExpert" type="Label" parent="DrillMenu/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Summe: $0"
+
+[node name="TimeExpert" type="Label" parent="DrillMenu/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Dauer: 1 Monat"
+
+[node name="BtnExpert" type="Button" parent="DrillMenu/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Beauftragen"
+
+[connection signal="pressed" from="BtnBack" to="." method="_on_btn_back_pressed"]
+[connection signal="pressed" from="InfoPanel/BtnAction" to="." method="_on_btn_action_pressed"]
+[connection signal="pressed" from="InfoPanel/BtnSecondary" to="." method="_on_btn_secondary_pressed"]
+[connection signal="pressed" from="DrillMenu/BtnCancel" to="." method="_on_btn_cancel_pressed"]
+[connection signal="pressed" from="DrillMenu/HBoxContainer/VBoxContainer/BtnSelf" to="." method="_on_btn_self_pressed"]
+[connection signal="pressed" from="DrillMenu/HBoxContainer/VBoxContainer2/BtnExpert" to="." method="_on_btn_expert_pressed"]

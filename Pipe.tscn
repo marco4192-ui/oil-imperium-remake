@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://drryh68ceb1k0"]
+
+[ext_resource type="Script" uid="uid://3h5rho6i38wq" path="res://pipe.gd" id="1_1adrp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xqn5b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i7ucc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vcot6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yifoh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vrosc"]
+
+[node name="Pipe" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1052.0
+offset_bottom = -548.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1adrp")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+color = Color(0.25565878, 0.25565878, 0.25565878, 1)
+
+[node name="Arm1" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 60.0
+offset_bottom = 60.0
+color = Color(0.19715416, 0.37610564, 0.16757262, 1)
+
+[node name="Arm2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 100.0
+offset_bottom = 60.0
+color = Color(0.19607843, 0.3764706, 0.16862746, 1)
+
+[node name="ClickArea" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xqn5b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_i7ucc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vcot6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yifoh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vrosc")
+
+[connection signal="pressed" from="ClickArea" to="." method="_on_click_area_pressed"]

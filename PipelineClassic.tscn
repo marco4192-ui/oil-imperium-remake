@@ -1,0 +1,137 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0571jd7vb1cq"]
+
+[ext_resource type="Script" uid="uid://4ortnej2tpcn" path="res://pipeline_classic.gd" id="1_cbddh"]
+[ext_resource type="Texture2D" uid="uid://bl3lv5n0cmdb0" path="res://assets/pipes/Timerbackground.png" id="2_xgvby"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xgvby"]
+font_size = 38
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="PipelineClassic" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cbddh")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="TimerDisplay" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -215.0
+offset_top = 26.0
+offset_right = -26.0
+offset_bottom = 98.0
+grow_horizontal = 0
+texture = ExtResource("2_xgvby")
+expand_mode = 1
+
+[node name="TimeText" type="Label" parent="TimerDisplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "00s"
+label_settings = SubResource("LabelSettings_xgvby")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 25.0
+one_shot = true
+
+[node name="GameArea" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -972.0
+offset_right = 1638.0
+grow_vertical = 0
+size_flags_horizontal = 3
+
+[node name="GridContainer" type="GridContainer" parent="GameArea"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 682.0
+offset_top = -425.0
+offset_right = 859.0
+offset_bottom = 537.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Sidebar" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Btn_H" type="Button" parent="HBoxContainer/Sidebar"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+tooltip_text = "Horizontales Rohr"
+flat = true
+
+[node name="Btn_V" type="Button" parent="HBoxContainer/Sidebar"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+tooltip_text = "Vertikales Rohr"
+flat = true
+
+[node name="Btn_NE" type="Button" parent="HBoxContainer/Sidebar"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+tooltip_text = "Kurve Nord-Ost"
+flat = true
+
+[node name="Btn_SE" type="Button" parent="HBoxContainer/Sidebar"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+tooltip_text = "Kurve Süd-Ost"
+flat = true
+
+[node name="Btn_SW" type="Button" parent="HBoxContainer/Sidebar"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+tooltip_text = "Kurve Süd-West"
+flat = true
+
+[node name="Btn_NW" type="Button" parent="HBoxContainer/Sidebar"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+tooltip_text = "Kurve Nord-West"
+flat = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

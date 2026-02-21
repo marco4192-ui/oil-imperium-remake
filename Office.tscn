@@ -1,0 +1,246 @@
+[gd_scene load_steps=13 format=3 uid="uid://bq7eu8eamg3w"]
+
+[ext_resource type="Script" uid="uid://cpa1sof464y0u" path="res://office.gd" id="1_ua801"]
+[ext_resource type="Texture2D" uid="uid://cgya5hrveh546" path="res://assets/offices/BüroAlternative.png" id="2_35wc1"]
+[ext_resource type="PackedScene" uid="uid://cebtxirdbcm4v" path="res://StatusPanel.tscn" id="3_35wc1"]
+
+[sub_resource type="FontFile" id="FontFile_35wc1"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_t0itt"]
+default_font = SubResource("FontFile_35wc1")
+default_font_size = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ua801"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_33cmi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_35wc1"]
+
+[sub_resource type="FontFile" id="FontFile_t0itt"]
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_p0jbg"]
+default_font = SubResource("FontFile_t0itt")
+default_font_size = 50
+
+[sub_resource type="FontFile" id="FontFile_r1f8t"]
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_bod3d"]
+default_font = SubResource("FontFile_r1f8t")
+default_font_size = 50
+
+[node name="Office" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_t0itt")
+script = ExtResource("1_ua801")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1916.0
+offset_bottom = 969.0
+texture = ExtResource("2_35wc1")
+expand_mode = 1
+
+[node name="BtnComputer" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 803.0
+offset_top = 438.0
+offset_right = -932.0
+offset_bottom = -512.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ua801")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_33cmi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_35wc1")
+text = "Computer"
+flat = true
+
+[node name="BtnMap" type="Button" parent="."]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 236.0
+offset_right = 563.0
+offset_bottom = 500.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="BtnCalendar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1675.0
+offset_top = 238.0
+offset_right = 1858.0
+offset_bottom = 324.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="LabelDay" type="Label" parent="BtnCalendar"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 71.212036
+offset_bottom = 91.20572
+rotation = 0.017453292
+theme = SubResource("Theme_p0jbg")
+theme_override_colors/font_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="LabelMonth" type="Label" parent="BtnCalendar"]
+layout_mode = 0
+offset_left = 82.78617
+offset_top = 0.20572832
+offset_right = 170.60342
+offset_bottom = 87.99996
+rotation = 0.017453292
+theme = SubResource("Theme_bod3d")
+theme_override_colors/font_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="BtnNewspaper" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1510.0
+offset_top = 530.0
+offset_right = 1635.0
+offset_bottom = 618.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="BtnBriefcase" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1354.0
+offset_top = 449.0
+offset_right = 1497.0
+offset_bottom = 550.0
+flat = true
+
+[node name="BtnDrawer" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1047.0
+offset_top = 624.0
+offset_right = 1232.0
+offset_bottom = 877.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="BtnPhone" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.085
+anchor_top = -0.064
+anchor_right = -0.08400001
+anchor_bottom = -0.064
+offset_left = 1335.2
+offset_top = 596.12
+offset_right = 1459.28
+offset_bottom = 671.12
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="BtnEndMonth" type="Button" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 17.0
+offset_right = 257.0
+offset_bottom = 83.0
+localize_numeral_system = false
+mouse_default_cursor_shape = 2
+text = "Monat beenden"
+
+[node name="BtnUpgrade" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1759.0
+offset_top = 13.0
+offset_right = 1903.0
+offset_bottom = 81.0
+text = "Upgrade"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StatusPanel" parent="CanvasLayer" instance=ExtResource("3_35wc1")]
+offset_top = -116.0
+
+[connection signal="pressed" from="BtnComputer" to="." method="_on_btn_computer_pressed"]
+[connection signal="pressed" from="BtnMap" to="." method="_on_btn_map_pressed"]
+[connection signal="pressed" from="BtnCalendar" to="." method="_on_btn_calendar_pressed"]
+[connection signal="pressed" from="BtnNewspaper" to="." method="_on_btn_newspaper_pressed"]
+[connection signal="pressed" from="BtnBriefcase" to="." method="_on_btn_briefcase_pressed"]
+[connection signal="pressed" from="BtnDrawer" to="." method="_on_btn_drawer_pressed"]
+[connection signal="pressed" from="BtnPhone" to="." method="_on_btn_phone_pressed"]
+[connection signal="pressed" from="BtnEndMonth" to="." method="_on_btn_end_month_pressed"]
+[connection signal="pressed" from="BtnUpgrade" to="." method="_on_btn_upgrade_pressed"]
