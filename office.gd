@@ -798,15 +798,27 @@ func create_loan_button():
         var style = StyleBoxFlat.new()
         style.bg_color = Color(0.15, 0.15, 0.15)
         style.border_color = Color(0.3, 0.6, 0.3)
-        style.border_width_all = 2
-        style.corner_radius_all = 8
+        style.border_width_left = 2
+        style.border_width_top = 2
+        style.border_width_right = 2
+        style.border_width_bottom = 2
+        style.corner_radius_top_left = 8
+        style.corner_radius_top_right = 8
+        style.corner_radius_bottom_right = 8
+        style.corner_radius_bottom_left = 8
         btn_loan.add_theme_stylebox_override("normal", style)
         
         var style_hover = StyleBoxFlat.new()
         style_hover.bg_color = Color(0.2, 0.3, 0.2)
         style_hover.border_color = Color(0.4, 0.8, 0.4)
-        style_hover.border_width_all = 2
-        style_hover.corner_radius_all = 8
+        style_hover.border_width_left = 2
+        style_hover.border_width_top = 2
+        style_hover.border_width_right = 2
+        style_hover.border_width_bottom = 2
+        style_hover.corner_radius_top_left = 8
+        style_hover.corner_radius_top_right = 8
+        style_hover.corner_radius_bottom_right = 8
+        style_hover.corner_radius_bottom_left = 8
         btn_loan.add_theme_stylebox_override("hover", style_hover)
         
         btn_loan.pressed.connect(_show_loan_menu)
