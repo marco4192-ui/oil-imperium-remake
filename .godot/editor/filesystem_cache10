@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1771776889
+::res://::1771777282
 AchievementDisplay.gd::GDScript::8744928356921880903::1771775613::0::1::::<>Control<><>0<>0<><>::
 AchievementManager.gd::GDScript::7508534246863105989::1771769866::0::1::::<>Node<><>0<>0<><>::
 ActivityFeed.gd::GDScript::8157158354063063332::1771769866::0::1::::<>Node<><>0<>0<><>::
@@ -7,16 +7,16 @@ ActivityFeedDisplay.gd::GDScript::3182749932332841229::1771775962::0::1::::<>Con
 AIController.gd::GDScript::7310963370852112485::1771775613::0::1::::<>Node<><>0<>0<><>::
 CharacterCreation.tscn::PackedScene::6594926718906701162::1771769866::0::1::::<><><>0<>0<><>::uid://bdq3ct6x5lr7d::::res://character_creation.gd
 character_creation.gd::GDScript::2631721952975572959::1771769867::0::1::::<>Control<><>0<>0<><>::
-computer.gd::GDScript::7820815963756756052::1771775613::0::1::::<>Control<><>0<>0<><>::
+computer.gd::GDScript::7820815963756756052::1771777213::0::1::::<>Control<><>0<>0<><>::
 Computer.gdshader::Shader::4260831429691800865::1771769866::0::1::::<><><>0<>0<><>::
 Computer.tscn::PackedScene::5546476063133991750::1771769866::0::1::::<><><>0<>0<><>::uid://djopxw55etvg3::::res://computer.gd<>uid://d13f6p2uojwyr::::res://assets/computer/Doto-VariableFont_ROND,wght.ttf<>uid://deut742aqtxi6::::res://assets/70s_Maps/worldmap.png<>uid://b1x8jhotesf74::::res://Computer.gdshader
 ContractManager.gd::GDScript::8989398831821446638::1771769866::0::1::::<>Node<><>0<>0<><>::
 DrillingMiniGame.tscn::PackedScene::7628631873500266983::1771769866::0::1::::<><><>0<>0<><>::uid://bkotfy1ltho3g::::res://drilling_game.gd<>uid://cpjhxlvjwymdf::::res://assets/DrillingGame/sky.png<>uid://dt5qwgvm6rd22::::res://assets/DrillingGame/Rohr.png<>uid://noy1tqcxgdbi::::res://assets/DrillingGame/Land_background_nosky.png<>uid://yh71k2rcf0qu::::res://assets/DrillingGame/Bohrkopf.png<>uid://uj7f4a14pnau::::res://assets/DrillingGame/bohrturm.png<>uid://b1iaiqxmd7awa::::res://assets/DrillingGame/Drill.mp3<>uid://dl8tseqf1tawn::::res://assets/DrillingGame/oilflush.mp3<>uid://c1w1u10762fdx::::res://scope.gd
-drilling_game.gd::GDScript::3118374261713139646::1771769867::0::1::::<>Node2D<><>0<>0<><>::
+drilling_game.gd::GDScript::3118374261713139646::1771777213::0::1::::<>Node2D<><>0<>0<><>::
 EraManager.gd::GDScript::1637048120658737264::1771769866::0::1::::<>Node<><>0<>0<><>::
 FeedbackOverlay.tscn::PackedScene::1371430173946205150::1771769866::0::1::::<><><>0<>0<><>::uid://ca3w66pyg8wrt::::res://feedback_overlay.gd
 feedback_overlay.gd::GDScript::4832036730447501781::1771769867::0::1::::<>CanvasLayer<><>0<>0<><>::
-FinancialReportPanel.gd::GDScript::7497591157866796199::1771775613::0::1::::<>Control<><>0<>0<><>::
+FinancialReportPanel.gd::GDScript::7497591157866796199::1771777213::0::1::::<>Control<><>0<>0<><>::
 FloatingText.tscn::PackedScene::4314276242292299965::1771769866::0::1::::<><><>0<>0<><>::res://floating_text.gd
 floating_text.gd::GDScript::1299706501473612279::1771769867::0::1::::<>Label<><>0<>0<><>::
 GameData.gd::GDScript::2469496952577578840::1771769866::0::1::::<>Node<><>0<>0<><>::
@@ -27,7 +27,7 @@ icon.svg::CompressedTexture2D::1845424321584324721::1771769867::1771775681::1:::
 LoanManager.gd::GDScript::4811038550350494386::1771769866::0::1::::<>Node<><>0<>0<><>::
 MapScreen.tscn::PackedScene::1737021449266039165::1771769866::0::1::::<><><>0<>0<><>::uid://drxw70o1ow50a::::res://map_screen.gd
 map_screen.gd::GDScript::8401347336426992794::1771769867::0::1::::<>Control<><>0<>0<><>::
-office.gd::GDScript::5827285552470050302::1771775613::0::1::::<>Control<><>0<>0<><>::
+office.gd::GDScript::5827285552470050302::1771777172::0::1::::<>Control<><>0<>0<><>::
 Office.tscn::PackedScene::105170076274905094::1771769866::0::1::::<><><>0<>0<><>::uid://cpa1sof464y0u::::res://office.gd<>uid://cgya5hrveh546::::res://assets/offices/BüroAlternative.png<>uid://cebtxirdbcm4v::::res://StatusPanel.tscn
 pipe.gd::GDScript::1981590525133743424::1771769867::0::1::::<>Control<><>0<>0<><>::
 Pipe.tscn::PackedScene::8389038202427285405::1771769866::0::1::::<><><>0<>0<><>::uid://3h5rho6i38wq::::res://pipe.gd
@@ -38,7 +38,7 @@ pipeline_repair.gd::GDScript::2789652525161196756::1771769867::0::1::::<>Control
 README.md::TextFile::-1::1771769866::0::1::::<><><>0<>0<><>::
 regiondetail.gdshader::Shader::4002150042947067505::1771769867::0::1::::<><><>0<>0<><>::
 RegionDetail.tscn::PackedScene::3113694741966028611::1771769866::0::1::::<><><>0<>0<><>::uid://bh3fidnii5yoh::::res://region_detail.gd<>uid://d13f6p2uojwyr::::res://assets/computer/Doto-VariableFont_ROND,wght.ttf
-region_detail.gd::GDScript::2935863215615962227::1771775613::0::1::::<>Control<><>0<>0<><>::
+region_detail.gd::GDScript::2935863215615962227::1771777213::0::1::::<>Control<><>0<>0<><>::
 SabotageManager.gd::GDScript::2655906707534826663::1771769866::0::1::::<>Node<><>0<>0<><>::
 scope.gd::GDScript::6644783375978026393::1771769867::0::1::::<>Control<><>0<>0<><>::
 StatusPanel.tscn::PackedScene::5056856262400979167::1771769866::0::1::::<><><>0<>0<><>::uid://cittoyomfl805::::res://status_panel.gd
