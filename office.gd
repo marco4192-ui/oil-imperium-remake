@@ -42,6 +42,7 @@ func _ready():
         create_tutorial_popup()
         create_sabotage_ui() 
         setup_tooltips()
+        create_loan_button()  # After tooltips so we can connect
         
         if not GameManager.data_updated.is_connected(update_ui):
                 GameManager.data_updated.connect(update_ui)
@@ -292,6 +293,7 @@ func update_ui():
         
         check_newspaper_status()
         check_upgrade_status()
+        _update_loan_button()
 
 func _on_btn_calendar_pressed():
         GameManager.next_day()
@@ -777,6 +779,53 @@ func _on_execute_sabotage_pressed():
         sabotage_layer.visible = false
         if result.success: FeedbackOverlay.show_msg("AUFTRAG ERTEILT: Operation läuft...", Color.GREEN)
         else: FeedbackOverlay.show_msg(result.message, Color.RED)
+
+# --- LOAN BUTTON ---
+var btn_loan: Button
+
+func create_loan_button():
+        # Create a visible loan button in the office
+        btn_loan = Button.new()
+        btn_loan.name = "BtnLoan"
+        btn_loan.text = "$"
+        btn_loan.tooltip_text = "Kreditzentrale (Taste: $)"
+        btn_loan.custom_minimum_size = Vector2(50, 50)
+        btn_loan.position = Vector2(20, 500)  # Left side of screen
+        btn_loan.add_theme_font_size_override("font_size", 24)
+        btn_loan.add_theme_color_override("font_color", Color(0.2, 0.8, 0.2))
+        
+        # Add styling
+        var style = StyleBoxFlat.new()
+        style.bg_color = Color(0.15, 0.15, 0.15)
+        style.border_color = Color(0.3, 0.6, 0.3)
+        style.border_width_all = 2
+        style.corner_radius_all = 8
+        btn_loan.add_theme_stylebox_override("normal", style)
+        
+        var style_hover = StyleBoxFlat.new()
+        style_hover.bg_color = Color(0.2, 0.3, 0.2)
+        style_hover.border_color = Color(0.4, 0.8, 0.4)
+        style_hover.border_width_all = 2
+        style_hover.corner_radius_all = 8
+        btn_loan.add_theme_stylebox_override("hover", style_hover)
+        
+        btn_loan.pressed.connect(_show_loan_menu)
+        add_child(btn_loan)
+        
+        # Connect tooltip (function already exists)
+        if tooltip_panel:
+                _connect_tooltip(btn_loan, "Kreditzentrale")
+        
+        # Update loan button visibility based on debt
+        _update_loan_button()
+
+func _update_loan_button():
+        if btn_loan and GameManager.loan_manager:
+                var debt = GameManager.loan_manager.get_total_debt()
+                if debt > 0:
+                        btn_loan.modulate = Color(1, 0.6, 0.6)  # Red tint when in debt
+                else:
+                        btn_loan.modulate = Color(1, 1, 1)
 
 # --- TOOLTIPS ---
 func setup_tooltips():
