@@ -3,22 +3,17 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c70sbgmusic"
-path="res://.godot/imported/70s-background-melody.mp3-b89a884c45287352373a66b050e72907.sample"
+path="res://.godot/imported/70s-background-melody.mp3-b89a884c45287352373a66b050e72907.mp3str"
 
 [deps]
 
 source_file="res://assets/background-loops/70s-background-melody.mp3"
-dest_files=["res://.godot/imported/70s-background-melody.mp3-b89a884c45287352373a66b050e72907.sample"]
+dest_files=["res://.godot/imported/70s-background-melody.mp3-b89a884c45287352373a66b050e72907.mp3str"]
 
 [params]
 
-force/8_bit=false
-force/mono=false
-force/max_rate=false
-force/max_rate_hz=44100
-edit/trim=false
-edit/normalize=false
-edit/loop_mode=0
-edit/loop_begin=0
-edit/loop_end=-1
-compress/mode=2
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
