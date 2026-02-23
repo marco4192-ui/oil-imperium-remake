@@ -334,9 +334,8 @@ func _on_btn_computer_pressed():
         get_tree().change_scene_to_file("res://Computer.tscn")
 
 func _on_btn_map_pressed():
-        if GameManager.current_viewing_region == "":
-                GameManager.current_viewing_region = "Texas"
-        get_tree().change_scene_to_file("res://RegionDetail.tscn")
+        # Go to Computer scene with worldmap (OilFieldMenu)
+        get_tree().change_scene_to_file("res://Computer.tscn")
 
 # --- SPEICHERN ---
 func create_save_popup():
