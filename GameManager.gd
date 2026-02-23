@@ -666,7 +666,7 @@ func commit_sale(r, amount, value, bypass_minigame: bool = false):
                 book_transaction(r, value, "Spot Sales")
                 spot_sales_history[r] = true
                 if has_node("/root/FeedbackOverlay"):
-                        get_node("/root/FeedbackOverlay").show_msg("VERKAUF ERFOLGREICH: +$" + str(int(value)), Color.GREEN)
+                        get_node("/root/FeedbackOverlay").show_msg("VERKAUF ERFOLGREICH: +$" + format_cash(value), Color.GREEN)
 
 func start_pipeline_minigame(r, amount, value):
         pending_sale_region = r
@@ -811,7 +811,7 @@ func hire_ted_redhair():
         
         var cost = TED_REDHAIR_COST * inflation_rate
         if cash < cost:
-                return {"success": false, "message": "Nicht genug Geld! Benötigt: $" + str(int(cost))}
+                return {"success": false, "message": "Nicht genug Geld! Benötigt: $" + format_cash(cost)}
         
         # Deduct cost
         cash -= cost
@@ -1091,6 +1091,26 @@ func get_existing_saves() -> Array:
                 if FileAccess.file_exists(SAVE_PATH_BASE + s + ".save"):
                         list.append(s)
         return list
+
+# --- CASH FORMATTING ---
+func format_cash(value, include_decimals: bool = false) -> String:
+        """Format a number with dot separators (e.g., 5.000.000)"""
+        if include_decimals:
+                var int_part = int(value)
+                var dec_part = abs(value - int_part) * 100
+                return format_cash(int_part) + "," + ("%02d" % int(dec_part))
+        
+        var s = str(int(abs(value)))
+        var res = ""
+        var counter = 0
+        for i in range(s.length() - 1, -1, -1):
+                res = s[i] + res
+                counter += 1
+                if counter % 3 == 0 and i > 0:
+                        res = "." + res
+        if value < 0:
+                res = "-" + res
+        return res
 
 func notify_update(): data_updated.emit()
 func advance_time(days): for i in range(days): next_day()

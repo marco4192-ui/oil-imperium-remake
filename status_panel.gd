@@ -30,8 +30,8 @@ func _ready():
         update_display()
 
 func update_display():
-        # Geld anzeigen (formatiert auf 2 Nachkommastellen)
-        money_label.text = "$ " + ("%.2f" % GameManager.cash)
+        # Geld anzeigen (formatiert mit Tausendertrennpunkten)
+        money_label.text = "$ " + GameManager.format_cash(GameManager.cash, true)
         
         # Era anzeigen
         if era_label:

@@ -10,6 +10,13 @@ var tutorial_enabled: bool = false
 var current_step: String = ""
 var completed_steps: Array = []
 
+# --- TUTORIAL POPUP ---
+var popup_panel: PanelContainer = null
+var popup_title: Label = null
+var popup_text: Label = null
+var popup_button: Button = null
+var popup_visible: bool = false
+
 # --- TUTORIAL STEPS ---
 const TUTORIAL_STEPS = {
         "welcome": {
@@ -150,12 +157,131 @@ func show_step(step_id: String):
         # Emit signal for UI to handle
         tutorial_step_shown.emit(step_id)
         
-        # Show via FeedbackOverlay if available
-        if has_node("/root/FeedbackOverlay"):
-                var msg = "=== " + step["title"] + " ===\n\n" + step["text"]
-                get_node("/root/FeedbackOverlay").show_msg(msg, Color.CYAN)
+        # Create and show popup dialog
+        _create_popup(step["title"], step["text"])
         
         print("[TUTORIAL] " + step["title"])
+
+func _create_popup(title: String, text: String):
+        # Remove existing popup if any
+        _close_popup()
+        
+        # Get viewport for adding popup
+        var viewport = get_tree().root
+        if not viewport:
+                return
+        
+        # Create background overlay (semi-transparent)
+        var overlay = ColorRect.new()
+        overlay.name = "TutorialOverlay"
+        overlay.color = Color(0, 0, 0, 0.6)
+        overlay.set_anchors_preset(Control.PRESET_FULL_RECT)
+        overlay.mouse_filter = Control.MOUSE_FILTER_STOP
+        
+        # Create main panel
+        popup_panel = PanelContainer.new()
+        popup_panel.name = "TutorialPopup"
+        popup_panel.set_anchors_preset(Control.PRESET_CENTER)
+        popup_panel.position = Vector2(get_viewport().get_visible_rect().size.x / 2 - 300, get_viewport().get_visible_rect().size.y / 2 - 200)
+        popup_panel.custom_minimum_size = Vector2(600, 350)
+        
+        # Style the panel
+        var style = StyleBoxFlat.new()
+        style.bg_color = Color(0.1, 0.15, 0.2)
+        style.border_color = Color(0.0, 0.8, 1.0)
+        style.set_border_width_all(3)
+        style.set_corner_radius_all(10)
+        style.set_content_margin_all(20)
+        popup_panel.add_theme_stylebox_override("panel", style)
+        
+        # Create content container
+        var vbox = VBoxContainer.new()
+        vbox.add_theme_constant_override("separation", 15)
+        popup_panel.add_child(vbox)
+        
+        # Title label
+        popup_title = Label.new()
+        popup_title.text = title
+        popup_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+        popup_title.add_theme_font_size_override("font_size", 28)
+        popup_title.add_theme_color_override("font_color", Color(0.0, 1.0, 1.0))
+        popup_title.add_theme_color_override("font_outline_color", Color(0, 0, 0))
+        popup_title.add_theme_constant_override("outline_size", 3)
+        vbox.add_child(popup_title)
+        
+        # Separator
+        var separator = HSeparator.new()
+        separator.add_theme_stylebox_override("separator", StyleBoxEmpty.new())
+        vbox.add_child(separator)
+        
+        # Text label
+        popup_text = Label.new()
+        popup_text.text = text
+        popup_text.autowrap_mode = TextServer.AUTOWRAP_WORD
+        popup_text.add_theme_font_size_override("font_size", 18)
+        popup_text.add_theme_color_override("font_color", Color.WHITE)
+        popup_text.custom_minimum_size.y = 200
+        popup_text.size_flags_vertical = Control.SIZE_EXPAND_FILL
+        vbox.add_child(popup_text)
+        
+        # Spacer
+        var spacer = Control.new()
+        spacer.custom_minimum_size.y = 10
+        vbox.add_child(spacer)
+        
+        # Close button
+        popup_button = Button.new()
+        popup_button.text = "VERSTANDEN"
+        popup_button.custom_minimum_size = Vector2(200, 50)
+        popup_button.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+        popup_button.add_theme_font_size_override("font_size", 20)
+        popup_button.add_theme_color_override("font_color", Color.WHITE)
+        popup_button.add_theme_color_override("font_hover_color", Color(0.0, 1.0, 1.0))
+        
+        # Style the button
+        var btn_style = StyleBoxFlat.new()
+        btn_style.bg_color = Color(0.2, 0.3, 0.4)
+        btn_style.border_color = Color(0.0, 0.8, 1.0)
+        btn_style.set_border_width_all(2)
+        btn_style.set_corner_radius_all(5)
+        popup_button.add_theme_stylebox_override("normal", btn_style)
+        
+        var btn_hover = StyleBoxFlat.new()
+        btn_hover.bg_color = Color(0.3, 0.4, 0.5)
+        btn_hover.border_color = Color(0.0, 1.0, 1.0)
+        btn_hover.set_border_width_all(2)
+        btn_hover.set_corner_radius_all(5)
+        popup_button.add_theme_stylebox_override("hover", btn_hover)
+        
+        popup_button.pressed.connect(_on_popup_button_pressed)
+        vbox.add_child(popup_button)
+        
+        # Add to scene
+        overlay.add_child(popup_panel)
+        viewport.add_child(overlay)
+        
+        popup_visible = true
+        
+        # Animation - fade in
+        overlay.modulate.a = 0.0
+        var tween = get_tree().create_tween()
+        tween.tween_property(overlay, "modulate:a", 1.0, 0.3)
+
+func _close_popup():
+        var viewport = get_tree().root
+        if not viewport:
+                return
+        
+        var overlay = viewport.get_node_or_null("TutorialOverlay")
+        if overlay:
+                overlay.queue_free()
+        
+        popup_panel = null
+        popup_visible = false
+
+func _on_popup_button_pressed():
+        _close_popup()
+        complete_current_step()
 
 func complete_current_step():
         if current_step == "" or current_step in completed_steps:

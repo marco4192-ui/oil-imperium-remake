@@ -46,7 +46,7 @@ func show_msg(text: String, color: Color = Color.WHITE):
                 
                 # Wir blenden ein zu SICHTBAREM WEISS (Color(1, 1, 1, 1))
                 tween.tween_property(panel, "modulate", Color(1, 1, 1, 1), 0.5)
-                tween.tween_interval(2.0) # Kurz warten
+                tween.tween_interval(4.0) # Kurz warten (doubled from 2.0)
                 tween.tween_property(panel, "modulate", Color(1, 1, 1, 0), 0.5)
 
 # NEUE FUNKTION FÜR FLIEGENDE ZAHLEN
