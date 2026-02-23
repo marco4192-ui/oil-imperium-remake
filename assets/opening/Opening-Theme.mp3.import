@@ -1,24 +1,19 @@
 [remap]
 
-importer="wav"
-type="AudioStreamWAV"
+importer="mp3"
+type="AudioStreamMP3"
 uid="uid://ddjtwnty513ei"
-path="res://.godot/imported/Opening-Theme.mp3-6ce9972655eb7c910d2c34acda3e45c0.sample"
+path="res://.godot/imported/Opening-Theme.mp3-6ce9972655eb7c910d2c34acda3e45c0.mp3str"
 
 [deps]
 
 source_file="res://assets/opening/Opening-Theme.mp3"
-dest_files=["res://.godot/imported/Opening-Theme.mp3-6ce9972655eb7c910d2c34acda3e45c0.sample"]
+dest_files=["res://.godot/imported/Opening-Theme.mp3-6ce9972655eb7c910d2c34acda3e45c0.mp3str"]
 
 [params]
 
-force/8_bit=false
-force/mono=false
-force/max_rate=false
-force/max_rate_hz=44100
-edit/trim=false
-edit/normalize=false
-edit/loop_mode=0
-edit/loop_begin=0
-edit/loop_end=-1
-compress/mode=2
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
