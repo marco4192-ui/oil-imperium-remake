@@ -1263,16 +1263,30 @@ func calculate_drilling_costs_internal(_region_name: String, is_self: bool, is_c
         
         var daily_rate = RIG_RATE_ONSHORE
         if is_claim_offshore: daily_rate = RIG_RATE_OFFSHORE
-        var rig_total = daily_rate * duration * inflation_rate
         
+        # Self-drilling: You do the work, so much cheaper rig costs (you own/operate)
+        # Expert drilling: Full service, premium pricing
+        var rig_total = 0.0
+        if is_self:
+                # Self-drilling: Only pay for equipment wear, no rental premium
+                rig_total = daily_rate * duration * 0.3 * inflation_rate
+        else:
+                # Expert drilling: Full premium service with markup
+                rig_total = daily_rate * duration * 1.5 * inflation_rate
+        
+        # Expert fee - significant premium for professional service
         var expert_fee = 0.0
-        if not is_self: expert_fee = 350000.0 * inflation_rate
+        if not is_self: expert_fee = 500000.0 * inflation_rate
         
         var logistics_total = cost_flights + cost_hotel + pipe_cost + LOGISTICS_SETUP_FEE + pump_cost + expert_fee
         var rental_total = rig_total + bits_cost
         var crew_total = cost_wages
         
+        # Self-drilling discount: You're investing time instead of money
+        # Apply a 40% discount to total for self-drilling
         var total_sum = logistics_total + rental_total + crew_total
+        if is_self:
+                total_sum *= 0.6  # 40% savings for doing it yourself
         
         return {
                 "total": int(total_sum),
