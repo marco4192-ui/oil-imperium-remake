@@ -2,17 +2,23 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://c8openingtheme001"
+uid="uid://ddjtwnty513ei"
+path="res://.godot/imported/Opening-Theme.mp3-6ce9972655eb7c910d2c34acda3e45c0.sample"
 
 [deps]
 
 source_file="res://assets/opening/Opening-Theme.mp3"
-dest_files=["res://assets/opening/Opening-Theme.mp3"]
+dest_files=["res://.godot/imported/Opening-Theme.mp3-6ce9972655eb7c910d2c34acda3e45c0.sample"]
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
-beat_count=0
-bar_beats=4
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

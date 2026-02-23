@@ -2,17 +2,23 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://c90sbgmusic"
+uid="uid://da0sbgmusic"
+path="res://.godot/imported/90s-background-melody.mp3-340046fa210f3982c5ffa16f89d21e94.sample"
 
 [deps]
 
 source_file="res://assets/background-loops/90s-background-melody.mp3"
-dest_files=["res://assets/background-loops/90s-background-melody.mp3"]
+dest_files=["res://.godot/imported/90s-background-melody.mp3-340046fa210f3982c5ffa16f89d21e94.sample"]
 
 [params]
 
-loop=true
-loop_offset=0
-bpm=0
-beat_count=0
-bar_beats=4
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
