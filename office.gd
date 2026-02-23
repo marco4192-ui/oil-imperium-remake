@@ -412,8 +412,23 @@ func _on_btn_drawer_pressed():
 # 2. KOFFER -> SPEICHERN
 func _on_btn_briefcase_pressed():
         # Speichermenü an der Mausposition öffnen
-        save_popup.position = Vector2(get_viewport().get_mouse_position())
+        save_popup.position = _get_safe_popup_position(save_popup)
         save_popup.popup()
+
+# Helper function to keep popups within viewport
+func _get_safe_popup_position(popup: PopupMenu) -> Vector2:
+        var mouse_pos = get_viewport().get_mouse_position()
+        var vp_size = get_viewport().get_visible_rect().size
+        
+        # Estimate popup size (will be adjusted after popup shows)
+        var estimated_width = 250
+        var estimated_height = 150
+        
+        # Clamp position to stay within viewport
+        var x = clamp(mouse_pos.x, 0, vp_size.x - estimated_width)
+        var y = clamp(mouse_pos.y, 0, vp_size.y - estimated_height)
+        
+        return Vector2(x, y)
 
 # 3. TELEFON -> MENU (Notrufe & Kredite)
 var phone_popup: PopupMenu
@@ -438,7 +453,7 @@ func _on_btn_phone_pressed():
         phone_popup.add_item("Kreditzentrale", 2)
         
         phone_popup.id_pressed.connect(_on_phone_menu_selected)
-        phone_popup.position = Vector2(get_viewport().get_mouse_position())
+        phone_popup.position = _get_safe_popup_position(phone_popup)
         phone_popup.popup()
         await phone_popup.popup_hide
         phone_popup.queue_free()
@@ -482,7 +497,7 @@ func _on_btn_newspaper_pressed():
                 options_popup.add_item("Tutorial-Einstellungen", 1)
                 options_popup.add_item("Archiv anzeigen (" + str(GameManager.news_archive.size()) + " Einträge)", 2)
                 options_popup.id_pressed.connect(_on_newspaper_menu_selected)
-                options_popup.position = Vector2(get_viewport().get_mouse_position())
+                options_popup.position = _get_safe_popup_position(options_popup)
                 options_popup.popup()
                 await options_popup.popup_hide
                 options_popup.queue_free()
@@ -490,7 +505,7 @@ func _on_btn_newspaper_pressed():
 func _on_newspaper_menu_selected(id):
         match id:
                 1:
-                        tutorial_popup.position = Vector2(get_viewport().get_mouse_position())
+                        tutorial_popup.position = _get_safe_popup_position(tutorial_popup)
                         tutorial_popup.popup()
                 2:
                         if GameManager.news_archive.is_empty():

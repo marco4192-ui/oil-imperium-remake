@@ -97,10 +97,20 @@ func _fmt_money(value: int) -> String:
         return res
 
 func _on_btn_load_pressed():
-        # Popup an Position des Buttons öffnen
+        # Popup an Position des Buttons öffnen, aber innerhalb des Viewports halten
         var rect = btn_load.get_global_rect()
-        load_popup.position = Vector2(rect.position.x, rect.end.y)
-        load_popup.show()
+        var vp_size = get_viewport().get_visible_rect().size
+        
+        # Estimate popup width based on content
+        var estimated_width = 400
+        var estimated_height = 150
+        
+        # Clamp position to stay within viewport
+        var x = clamp(rect.position.x, 0, vp_size.x - estimated_width)
+        var y = clamp(rect.end.y, 0, vp_size.y - estimated_height)
+        
+        load_popup.position = Vector2(x, y)
+        load_popup.popup()
 
 func _on_load_item_pressed(id):
         if id == -1: return
