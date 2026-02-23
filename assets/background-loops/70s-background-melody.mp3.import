@@ -1,7 +1,7 @@
 [remap]
 
-importer="wav"
-type="AudioStreamWAV"
+importer="mp3"
+type="AudioStreamMP3"
 uid="uid://c70sbgmusic"
 path="res://.godot/imported/70s-background-melody.mp3-b89a884c45287352373a66b050e72907.sample"
 
